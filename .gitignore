@@ -1,0 +1,3 @@
+hello/.venv/*
+python-introduction/modules/boxes/sources/__pycache__/*
+*.out
