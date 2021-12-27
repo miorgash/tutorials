@@ -4,7 +4,8 @@
    を印字する */
 main()
 {
-    printf("fahr=0.20, ..., 2300 に対して、華氏-摂氏対応表を印字する\n");
+    /* 1-3 & 1-4 */
+    printf("celsius=0, ..., 100 に対して、摂氏-華氏対応表を印字する\n");
     float fahr, celsius;
     int lower, upper, step;
 
