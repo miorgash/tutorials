@@ -1,0 +1,21 @@
+version: '3'
+services:
+  dev:
+    build: 
+      context: .
+      dockerfile: gpu.Dockerfile
+    image: miorgash/bert_book:cuda
+    container_name: bert_book_cuda
+    volumes:
+      - ..:/root/work
+      - ldcc:/data/ldcc
+    working_dir: /root/work
+    ports:
+      - "8888:8888"
+    command: jupyter notebook --ip="0.0.0.0" --notebook-dir=/root/work --allow-root --no-browser
+    restart: always
+    runtime: nvidia
+volumes:
+  ldcc:
+    external: 
+      name: ldcc
