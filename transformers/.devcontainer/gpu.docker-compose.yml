@@ -1,0 +1,16 @@
+version: '3'
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: gpu.Dockerfile
+    platform: linux/amd64
+    image: miorgash/transformers:cuda
+    container_name: transformers_cuda
+    volumes:
+      - ..:/root/work
+    working_dir: /root/work
+    command: /bin/bash
+    tty: true
+    restart: always
+    runtime: nvidia
