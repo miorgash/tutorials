@@ -1,0 +1,15 @@
+version: '3'
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    image: miorgash/transformers:latest
+    container_name: transformers
+    volumes:
+      - ..:/root/work
+    working_dir: /root/work
+    command: /bin/bash
+    tty: true
+    restart: always

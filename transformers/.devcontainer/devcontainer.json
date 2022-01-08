@@ -1,0 +1,15 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/python-3
+{
+	"name": "transformer",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "dev",
+	"workspaceFolder": "/root/work",
+	"shutdownAction": "stopCompose",
+	"settings": {
+		"python.envFile": "${workspaceFolder}/.env"
+	},
+	"extensions": [
+		"ms-python.python"
+	]
+}
